@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import GradientBackground from './GradientBackground'
+import GradientBackground from './common/GradientBackground'
 
 const Hero = () => {
     return (
@@ -52,7 +52,6 @@ const Hero = () => {
                         />
                     </div>
                 </div>
-
             </div>
         </GradientBackground>
 

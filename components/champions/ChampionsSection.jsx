@@ -1,8 +1,8 @@
 import React from 'react'
-import CardChampion from './CardChampion'
-import GradientBackground from './GradientBackground'
+import CardChampion from './ChampionCard'
+import GradientBackground from '../common/GradientBackground'
 
-const PreviousChampions = () => {
+const ChampionsSection = () => {
     return (
         <GradientBackground>
             <div className='p-12 lg:px-[20%]'>
@@ -17,4 +17,4 @@ const PreviousChampions = () => {
     )
 }
 
-export default PreviousChampions
+export default ChampionsSection

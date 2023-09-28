@@ -1,11 +1,11 @@
 import React from 'react'
-import CardStep from './CardStep'
-import GradientBackground from './GradientBackground'
+import CardStep from './StepCard'
+import GradientBackground from '../common/GradientBackground'
 
 
 /* bg-[url('/images/png-big-city.png')]  bg-cover */
 
-const Steps = () => {
+const StepsSection = () => {
     return (
         <GradientBackground backgroundImage="/images/darkness.png">               
             {/* Contenido */}
@@ -15,9 +15,7 @@ const Steps = () => {
                 <CardStep urlImg={"/images/img-3-web-1.webp"} altImg={"The guitarist in the concert."} />
             </div>
         </GradientBackground>
-       
-      
     )
 }
 
-export default Steps
+export default StepsSection

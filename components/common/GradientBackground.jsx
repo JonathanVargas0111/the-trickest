@@ -6,7 +6,7 @@ const GradientBackground = ({ backgroundImage, children }) => {
   };
 
   return (
-    <div className="relative">
+    <section className="relative">
       {/* Fondo de imagen */}
       <div className="absolute inset-0 bg-cover bg-repeat" style={backgroundStyle}></div>
       {/* Gradiente transparente */}
@@ -15,7 +15,7 @@ const GradientBackground = ({ backgroundImage, children }) => {
       <div className='relative'>
         {children}
       </div>
-    </div>
+    </section>
   );
 };
 
