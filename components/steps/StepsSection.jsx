@@ -9,7 +9,7 @@ const StepsSection = () => {
     return (
         <GradientBackground backgroundImage="/images/darkness.png">               
             {/* Contenido */}
-            <div className="flex flex-col p-5 justify-center items-center md:flex-row md:py-24">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 sm:px-[10%]">
                 <CardStep urlImg={"/images/img-1-web-1.webp"} altImg={"The guitarist in the concert."} />
                 <CardStep urlImg={"/images/img-2-web-1.webp"} altImg={"The guitarist in the concert."} />
                 <CardStep urlImg={"/images/img-3-web-1.webp"} altImg={"The guitarist in the concert."} />
