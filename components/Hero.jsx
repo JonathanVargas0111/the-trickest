@@ -5,7 +5,7 @@ import GradientBackground from './common/GradientBackground'
 const Hero = () => {
     return (
         <GradientBackground>
-            <div className='flex flex-col'>
+            <div className='flex flex-col pt-24'>
                 <div className='w-full'>
                     <Image
                         src="/images/logo.png"
