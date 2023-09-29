@@ -1,8 +1,7 @@
-import React from 'react'
 import Link from 'next/link'
-
 import { AiOutlineInstagram } from 'react-icons/ai'
 import { AiOutlineTwitter } from 'react-icons/ai'
+
 const CardChampion = ({ nameSkate, categori, imgSkate }) => {
   return (
     <div className="relative">

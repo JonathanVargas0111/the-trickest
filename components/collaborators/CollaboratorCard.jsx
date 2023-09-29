@@ -1,37 +1,36 @@
-import React from 'react'
-import Link from 'next/link'
-import { AiOutlineInstagram } from 'react-icons/ai'
-import { AiOutlineTwitter } from 'react-icons/ai'
+import { AiOutlineInstagram } from 'react-icons/ai';
+import { AiOutlineTwitter } from 'react-icons/ai';
+import { BsGlobeAmericas } from 'react-icons/bs';
+import SocialLinkIcon from '../common/SocialLinkIcon'; 
 
-const CollaboratorCard = () => {
+const CollaboratorCard = ({ nameCollaborator, urlImage, twitterHref, instagramHref, websiteHref }) => {
     return (
-        <div className="relative rounded-lg overflow-hidden shadow-lg">
-            <div className="absolute w-full h-16 -top-8 left-0 flex justify-center items-center">
-                <img src="/images/img-1-web-1.webp" alt="Colaborador 1" className="max-h-16" />
-            </div>
-            <div className="p-4">
-                <h3 className="text-xl font-semibold">Colaborator 1</h3>
+        <div className="relative">
+            {/* Capa 1 */}
+            <div className="absolute w-full h-full bg-black opacity-30 rounded-lg"></div>
 
-                <div className="flex gap-5 mt-3">
-                    <Link href="#">
-                        <div className="rounded-full bg-slate-950 p-1">
-                            <AiOutlineTwitter />
-                        </div>
-                    </Link>
-                    <Link href="#">
-                        <div className="rounded-full bg-pink-600 p-1">
-                            <AiOutlineInstagram />
-                        </div>
-                    </Link>
-                    <Link href="#" className="text-green-500 hover:underline">
-                        <i className="fas fa-globe"></i>
-                    </Link>
+            {/* Capa 2 */}
+            <div className="relative w-full flex flex-col items-center rounded-lg px-5 pt-2 pb-5">
+                <div className="rounded-full -mt-8 mb-2 bg-black overflow-auto">
+                    <img src={urlImage} alt={nameCollaborator} className="max-h-16" />
+                </div>
+                <div className="rounded-l-lg flex flex-col items-center">
+                    <h3 className="text-xl font-semibold">{nameCollaborator}</h3>
+                    <div className="flex gap-5 mt-3">
+                        {twitterHref && (
+                            <SocialLinkIcon href={twitterHref} bgColor="bg-slate-950" icon={<AiOutlineTwitter />} />
+                        )}
+                        {instagramHref && (
+                            <SocialLinkIcon href={instagramHref} bgColor="bg-pink-600" icon={<AiOutlineInstagram />} />
+                        )}
+                        {websiteHref && (
+                            <SocialLinkIcon href={websiteHref} bgColor="bg-slate-500" icon={<BsGlobeAmericas />} />
+                        )}
+                    </div>
                 </div>
             </div>
         </div>
+    );
+};
 
-
-    )
-}
-
-export default CollaboratorCard
+export default CollaboratorCard;
