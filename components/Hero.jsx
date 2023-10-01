@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import GradientBackground from './common/GradientBackground'
+import FormRegister from './common/FormRegister'
 
 const Hero = () => {
     return (
@@ -26,19 +27,7 @@ const Hero = () => {
                                 ¡Esta es tu oportunidad!
                             </h2>
                         </div>
-                        <div className='w-full'>
-                            <form className="flex shadow justify-between mt-6 w-72 md:w-10/12 lg:w-9/12 lg:max-w-xl h-13 relative p-[2px] rounded-full bg-white transition mx-auto lg:mt-12">
-                                <input
-                                    className="z-10 w-44 md:w-full h-11 px-6 outline-none bg-transparent text-sm text-gray-700"
-                                    placeholder="Enter your email"
-                                    type="email"
-                                    required=""
-                                />
-                                <button
-                                    type="submit"
-                                    className="z-10 w-28 md:w-48 h-11 flex justify-center items-center bg-black rounded-full text-white text-xs cursor-pointer transition outline-0 hover:bg-violet-950 disabled:opacity-50 disabled:cursor-not-allowed">Join the waitlist </button>
-                            </form>
-                        </div>
+                        <FormRegister />
                     </div>
 
                     <div className='w-1/2 hidden md:block justify-center md:w-1/5'>
