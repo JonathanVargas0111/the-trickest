@@ -17,7 +17,7 @@ const PageHeader = () => {
     return (
         <header className="">
             {/* Mobile */}
-            <div className="w-full flex flex-col items-center justify-between fixed top-0 left-0 z-10 sm:hidden">
+            <div className="w-full flex flex-col items-center justify-between fixed top-0 left-0 z-50 sm:hidden">
                 <div className={`w-full flex flex-row justify-between items-center pt-5 px-[8%] ${nav ? ' bg-gray-800' : ''}`}>
                     <div className="flex items-center h-20">
                         <Image
@@ -45,7 +45,7 @@ const PageHeader = () => {
             </div>
 
             {/* Desktop */}
-            <div className='hidden w-full sm:flex items-center justify-between px-[8%] fixed top-0 left-0 z-10'>
+            <div className='hidden w-full sm:flex items-center justify-between px-[8%] fixed top-0 left-0 z-50'>
                 <div className="flex items-center h-20">
                     <Image
                         src="/logo.png"
