@@ -14,6 +14,13 @@ const PageHeader = () => {
         { id: 4, idSection: "collaborators", titleBtn: "Colaboradores" },
     ];
 
+    const toggleNav = () => {
+        // Cambiar el valor de la variable nav de true a false o viceversa
+        setNav(!nav);
+        console.log(nav)
+    }
+
+
     return (
         <header className="">
             {/* Mobile */}
@@ -33,15 +40,24 @@ const PageHeader = () => {
                         {nav ? <FaTimes size={30} /> : <FaBars size={30} />}
                     </div>
                 </div>
-                <div className={`flex flex-col justify-start items-center w-full h-screen bg-gradient-to-b bg-gray-800 overflow-hidden transition-opacity duration-300 ${nav ? 'opacity-100' : 'opacity-0 h-0'}`}>
-                    {menuItems.map(({ id, idSection, titleBtn }) => (
-                        <Link href={`/#section-${idSection}`}
-                            key={id}
-                            className='font-medium text-blue-600 py-3 md:py-6 dark:text-blue-500 border-b-[1px] border-solid w-full text-3xl' >
-                            <button className='m-5 capitalize' onClick={() => setNav(!nav)}>{titleBtn}</button>
-                        </Link>
-                    ))}
-                </div>
+                {
+                    nav ? <div className={`flex flex-col justify-start items-center w-full h-screen bg-gradient-to-b bg-gray-800 overflow-hidden transition-opacity duration-300 ${nav ? 'opacity-100' : 'opacity-0 h-0'}`}>
+                        {
+                            menuItems.map(({ id, idSection, titleBtn }) => (
+                                <Link href={`/#section-${idSection}`}
+                                    key={id}
+                                    className='font-medium text-blue-600 py-3 md:py-6 dark:text-blue-500 border-b-[1px] border-solid w-full text-3xl' >
+                                    <button className='m-5 capitalize'
+                                        onClick={() => { toggleNav() }}
+                                    >{titleBtn}</button>
+                                </Link>
+                            ))
+                        }
+
+                    </div>
+                        :
+                        ''
+                }
             </div>
 
             {/* Desktop */}
