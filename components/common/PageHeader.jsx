@@ -9,9 +9,9 @@ const PageHeader = () => {
     const [nav, setNav] = useState(false);
     const menuItems = [
         { id: 1, idSection: "inicio", titleBtn: "Inicio" },
-        { id: 2, idSection: "acerca-de", titleBtn: "Acerca de" },
-        { id: 3, idSection: "servicios", titleBtn: "Servicios" },
-        { id: 4, idSection: "collaborators", titleBtn: "Colaboradores" },
+        { id: 2, idSection: "acerca-de", titleBtn: "Participa" },
+        { id: 3, idSection: "servicios", titleBtn: "Ganadores" },
+        { id: 4, idSection: "collaborators", titleBtn: "Partners" },
     ];
 
     const toggleNav = () => {

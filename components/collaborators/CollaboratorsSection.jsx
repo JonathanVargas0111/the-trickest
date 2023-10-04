@@ -17,6 +17,13 @@ const collaboratorsData = [
     instagramHref: "https://www.instagram.com/jonathanvargasari/",
     websiteHref: "https://www.devjonathanvargas.website/",
   },
+  {
+    nameCollaborator: "devjonathanvargas",
+    urlImage: "/images/collaborator/devjonathanvargas.png",
+    twitterHref: "https://twitter.com/jonathanfva92",
+    instagramHref: "",
+    websiteHref: "https://www.devjonathanvargas.website/",
+  },
   // Agrega más objetos de colaboradores según sea necesario
 ];
 

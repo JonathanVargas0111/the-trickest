@@ -4,14 +4,27 @@ import ChampionsSection from "@/components/champions/ChampionsSection"
 import Steps from "@/components/steps/StepsSection"
 import Image from "next/image"
 import InstagramSection from "@/components/instagramComponent/InstagramSection"
+import GradientBackground from "@/components/common/GradientBackground"
 export default function Home() {
   return (
     <div className="w-full">
       <Hero />
+      <GradientBackground>
+        <div className="p-20 flex justify-center items-center flex-col gap-6 ">
+          <h3 className="text-5xl">¡Evento Épico en Curso!</h3>
+          <p className="text-lg">
+            <span className="font-semibold">Fecha de Apertura:</span> 8 de Octubre
+            <span className="mx-2">-</span>
+            <span className="font-semibold">Fecha de Cierre:</span> 1 de Noviembre
+          </p>
+        </div>
+
+      </GradientBackground>
+      <ChampionsSection />
       <Steps />
-      <ChampionsSection/>
-      <CollaboratorsSection/>
-      <InstagramSection/>
+
+      <CollaboratorsSection />
+      <InstagramSection />
     </div>
 
   )

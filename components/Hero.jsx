@@ -27,7 +27,7 @@ const Hero = () => {
                                 ¡Esta es tu oportunidad!
                             </h2>
                         </div>
-                        <FormRegister />
+                        {/* <FormRegister /> */}
                     </div>
 
                     <div className='w-1/2 hidden md:block justify-center md:w-1/5'>

@@ -1,8 +1,9 @@
 import Link from 'next/link'
 import { AiOutlineInstagram } from 'react-icons/ai'
 import { AiOutlineTwitter } from 'react-icons/ai'
+import { CiPlay1 } from 'react-icons/ci'
 
-const CardChampion = ({ nameSkate, categori, imgSkate }) => {
+const CardChampion = ({ nameSkate, categori, imgSkate, nameTruco }) => {
   return (
     <div className="relative">
       {/* Capa 1 */}
@@ -17,7 +18,7 @@ const CardChampion = ({ nameSkate, categori, imgSkate }) => {
         <div className="w-full flex flex-col rounded-lg text-left">
           <div className="px-4">
             <h5 className="text-xl font-medium mb-3">{nameSkate}</h5>
-            <span className="text-sm">{categori}</span>
+            <span className="text-sm">{categori}: <span className='text-base font-semibold'>{nameTruco}</span> </span>
             <div className="flex gap-5 mt-3">
               <Link href="#">
                 <div className="rounded-full bg-slate-950 p-1">
@@ -31,6 +32,9 @@ const CardChampion = ({ nameSkate, categori, imgSkate }) => {
               </Link>
             </div>
           </div>
+        </div>
+        <div className="w-44 h-32 flex justify-center items-center rounded-l-lg overflow-hidden text-4xl mr-8">
+          <CiPlay1 />
         </div>
       </div>
     </div>
