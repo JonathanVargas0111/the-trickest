@@ -5,7 +5,18 @@ import Steps from "@/components/steps/StepsSection"
 import Image from "next/image"
 import InstagramSection from "@/components/instagramComponent/InstagramSection"
 import GradientBackground from "@/components/common/GradientBackground"
+
+
+export const metadata= {
+  title: 'Concurso de Skate - Resultados y Detalles',
+  description: 'Descubre a los ganadores, fechas del evento, información sobre cómo participar, nuestros colaboradores y mantente conectado a través de nuestras redes sociales para las últimas actualizaciones del emocionante concurso de skate.',
+  keywords: ['Concurso de Skate', 'Ganadores', 'Fechas del Evento', 'Cómo Participar', 'Colaboradores', 'Redes Sociales']
+};
+
+
+
 export default function Home() {
+  
   return (
     <div className="w-full">
       <Hero />
@@ -22,7 +33,6 @@ export default function Home() {
       </GradientBackground>
       <ChampionsSection />
       <Steps />
-
       <CollaboratorsSection />
       <InstagramSection />
     </div>
